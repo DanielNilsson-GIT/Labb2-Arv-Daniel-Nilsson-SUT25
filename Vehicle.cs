@@ -35,7 +35,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Console.WriteLine("Tuuuut!");
             Console.Beep();
         }
-        public virtual int DistanceDriven()
+        public virtual int AddMiles()
         {
 
             Console.WriteLine("Hur många kilometer färdades du?");

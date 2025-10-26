@@ -4,17 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
 
-            Boat eka = new Boat("Eksjö båt", "Optimistjolle", 0, "Sverige", 1,4);
+            Boat eka = new Boat("Eksjö båt", "Optimistjolle", "Sverige",0, 4);
+            eka.PrintInfo();
+            Console.WriteLine("-----------------------------------------------");
+            eka.AddMiles();
+            eka.PrintInfo();
+            Console.WriteLine("-----------------------------------------------");
+            eka.AddMiles();
+            Console.WriteLine("-----------------------------------------------");
             eka.PrintInfo();
 
             Console.WriteLine("-----------------------------------------------");
 
-            Car volle = new Car("Volvo", "S80", 4, "Sverige", 24000,0);
-            volle.PrintInfo();
-            volle.DistanceDriven();
-            volle.PrintInfo();
+            //Car volle = new Car("Volvo", "S80", 4, "Sverige", 24000,0);
+            //volle.PrintInfo();
+            //volle.AddMiles();
+            //volle.PrintInfo();
         }
     }
 }
