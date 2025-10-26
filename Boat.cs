@@ -11,14 +11,10 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         public int NauticalMiles { get; set; }
 
 
-        public Boat(string brand, string model, int noofwheels, string countryoforigin, int nauticalmiles)
+        public Boat(string brand, string model, int noofwheels, string countryoforigin, int nauticalmiles, int noofprevowners): 
+            base(brand,model,noofwheels,countryoforigin,0,noofprevowners)
         {
-            Brand = brand;
-            Model = model;
-            NoOfWheels = noofwheels;
-            CountryOfOrigin = countryoforigin;
             NauticalMiles = nauticalmiles;
-
         }
 
         public override void Honk()
@@ -26,16 +22,16 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Console.WriteLine("DOOOOOT!");
             Console.Beep(20,3);
         }
-        public override int Drive()
+        public override int DistanceDriven()
         {
-            double nautmiles= base.Drive()/0.1852;
+            double nautmiles= base.DistanceDriven()/0.1852;
             int roundednautmiles=(int)Math.Round(nautmiles);
             return roundednautmiles;
 
         }
         public override void PrintInfo()
         {
-            Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nSjömil: {NauticalMiles}");
+            Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nSjömil: {NauticalMiles}\n Antal ägare: {NoOfPreviousOwners}");
         }
     }
 }

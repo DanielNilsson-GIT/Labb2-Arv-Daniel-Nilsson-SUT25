@@ -9,13 +9,11 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
     internal class Motorcycle:Vehicle
     {
 
-        public Motorcycle(string brand, string model, int noofwheels, string countryoforigin, int swemiles)
+        public Motorcycle(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners)
+            : base(brand, model, noofwheels, countryoforigin, swemiles, noofpreviousowners)
+            
         {
-            Brand = brand;
-            Model = model;
-            NoOfWheels = noofwheels;
-            CountryOfOrigin = countryoforigin;
-            SweMiles = swemiles;
+           
 
         }
         public override void Honk()

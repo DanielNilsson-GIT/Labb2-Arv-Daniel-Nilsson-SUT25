@@ -6,14 +6,14 @@
         {
             Console.WriteLine("Hello, World!");
 
-            Boat eka = new Boat("eksjö båt", "optimistjolle", 0, "Sverige", 1);
+            Boat eka = new Boat("Eksjö båt", "Optimistjolle", 0, "Sverige", 1,4);
             eka.PrintInfo();
 
             Console.WriteLine("-----------------------------------------------");
 
-            Car volle = new Car("Volvo", "S80", 4, "Sverige", 24000);
+            Car volle = new Car("Volvo", "S80", 4, "Sverige", 24000,0);
             volle.PrintInfo();
-            volle.Drive();
+            volle.DistanceDriven();
             volle.PrintInfo();
         }
     }
