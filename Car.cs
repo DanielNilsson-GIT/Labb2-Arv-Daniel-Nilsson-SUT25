@@ -21,6 +21,11 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Hydralics = hydralics;
         }
 
+        public override void startEngine()
+        {
+            base.startEngine();
+            Console.WriteLine("Brrr-brrr-brrr-vrooooom!");
+        }
         public void PopTheTrunk()
         {
             if (Trunkopen == false)

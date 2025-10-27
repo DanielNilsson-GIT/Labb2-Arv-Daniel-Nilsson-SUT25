@@ -15,6 +15,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         public int SweMiles { get; set; } = 0;
         public int NoOfPreviousOwners { get; set; } = 0;
 
+
         public Vehicle()
         {
             
@@ -30,7 +31,12 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             NoOfPreviousOwners = noofpreviousowners;
         }
 
-       
+        public virtual void startEngine()
+        {
+            Console.WriteLine("Nyckel vrids...");
+        }
+
+
         public virtual void PrintInfo()
         {
             Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nMil: {SweMiles}\nAntal ägare: {NoOfPreviousOwners}");
