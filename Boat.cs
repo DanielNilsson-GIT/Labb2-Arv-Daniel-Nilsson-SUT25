@@ -16,6 +16,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
 
         }
 
+       
 
         public Boat(string brand, string model, string countryoforigin, int nauticalmiles, int noofprevowners): 
             base(brand,model,0,countryoforigin,0,noofprevowners)
@@ -23,6 +24,11 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             NauticalMiles = nauticalmiles;
         }
 
+        public override void startEngine()
+        {
+            base.startEngine();
+            Console.WriteLine("Chug-chug-chug, Splutt-splutt, Blubb-blubb-vrooooom!");
+        }
         public override void Honk()
         {
             Console.WriteLine("DOOOOOT!");

@@ -18,6 +18,11 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Gang = gang;
         }
 
+        public override void startEngine()
+        {
+            base.startEngine();
+            Console.WriteLine("Rr-rrr-vrroooom-vrroooom!");
+        }
         public void DoAWheelie()
         {
             Random rnd = new Random();
