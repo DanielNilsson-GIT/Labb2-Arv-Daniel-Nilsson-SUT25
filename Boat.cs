@@ -9,7 +9,12 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
 {
     internal class Boat:Vehicle
     {
-        public int NauticalMiles { get; set; }
+        public int NauticalMiles { get; set; } = 0;
+
+        public Boat() : base()
+        {
+
+        }
 
 
         public Boat(string brand, string model, string countryoforigin, int nauticalmiles, int noofprevowners): 

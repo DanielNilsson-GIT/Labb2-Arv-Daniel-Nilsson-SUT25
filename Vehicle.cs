@@ -8,12 +8,17 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
 {
     internal abstract class Vehicle
     {
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public int NoOfWheels { get; set; }
-        public string CountryOfOrigin { get; set; }
-        public int SweMiles { get; set; }
-        public int NoOfPreviousOwners { get; set; }
+        public string Brand { get; set; } = "Unknown";
+        public string Model { get; set; } = "Unassigned";
+        public int NoOfWheels { get; set; } = 0;
+        public string CountryOfOrigin { get; set; } = "Unknown";
+        public int SweMiles { get; set; } = 0;
+        public int NoOfPreviousOwners { get; set; } = 0;
+
+        public Vehicle()
+        {
+            
+        }
 
         public Vehicle(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners)
         {
