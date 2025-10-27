@@ -12,7 +12,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         public string Gang { get; set; } = null;
 
         public Motorcycle(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners,bool partofgang,string gang)
-            : base(brand, model, noofwheels, countryoforigin, swemiles, noofpreviousowners)
+            : base(brand, model, noofwheels, countryoforigin, swemiles, noofpreviousowners,false)
         {
             PartOfGang = partofgang;
             Gang = gang;
