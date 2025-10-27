@@ -19,7 +19,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
        
 
         public Boat(string brand, string model, string countryoforigin, int nauticalmiles, int noofprevowners): 
-            base(brand,model,0,countryoforigin,0,noofprevowners)
+            base(brand,model,0,countryoforigin,0,noofprevowners,false)
         {
             NauticalMiles = nauticalmiles;
         }

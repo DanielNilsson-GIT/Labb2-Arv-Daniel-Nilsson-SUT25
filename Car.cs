@@ -16,7 +16,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
 
         }
         public Car(string brand, string model, int noofwheels, string countryoforigin, int swemiles,int noofpreviousowners,bool hydralics)
-            :base(brand,model,noofwheels,countryoforigin,swemiles,noofpreviousowners)
+            :base(brand,model,noofwheels,countryoforigin,swemiles,noofpreviousowners,false)
         {
             Hydralics = hydralics;
         }
