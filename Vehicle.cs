@@ -6,33 +6,41 @@ using System.Threading.Tasks;
 
 namespace Labb2_Arv_Daniel_Nilsson_SUT25
 {
-    internal class Vehicle
+    internal abstract class Vehicle
     {
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public int NoOfWheels { get; set; }
-        public string CountryOfOrigin { get; set; }
-        public int SweMiles { get; set; }
+        public string Brand { get; set; } = "Unknown";
+        public string Model { get; set; } = "Unassigned";
+        public int NoOfWheels { get; set; } = 0;
+        public string CountryOfOrigin { get; set; } = "Unknown";
+        public int SweMiles { get; set; } = 0;
+        public int NoOfPreviousOwners { get; set; } = 0;
 
-        //public Vehicle(string brand, string model, int noofwheels, string countryoforigin, int swemiles)
-        //{
-        //    Brand = brand;
-        //    Model = model;
-        //    NoOfWheels = noofwheels;
-        //    CountryOfOrigin = countryoforigin;
-        //    SweMiles = swemiles;
+        public Vehicle()
+        {
+            
+        }
 
-        //}
+        public Vehicle(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners)
+        {
+            Brand = brand;
+            Model = model;
+            NoOfWheels = noofwheels;
+            CountryOfOrigin = countryoforigin;
+            SweMiles = swemiles;
+            NoOfPreviousOwners = noofpreviousowners;
+        }
+
+       
         public virtual void PrintInfo()
         {
-            Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nMil: {SweMiles}");
+            Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nMil: {SweMiles}\nAntal ägare: {NoOfPreviousOwners}");
         }
         public virtual void Honk()
         {
             Console.WriteLine("Tuuuut!");
             Console.Beep();
         }
-        public virtual int Drive()
+        public virtual int AddMiles()
         {
 
             Console.WriteLine("Hur många kilometer färdades du?");
