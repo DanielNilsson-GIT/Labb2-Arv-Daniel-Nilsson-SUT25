@@ -51,6 +51,20 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         public override void PrintInfo()
         {
             Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nLand: {CountryOfOrigin}\nSjömil: {NauticalMiles}\nAntal ägare: {NoOfPreviousOwners}");
+            Console.Write("\nHar fordonet körförbud? ");
+            if (Körförbud)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(Körförbud);
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(Körförbud);
+                Console.ResetColor();
+            }
+            Console.WriteLine("\n____________________________________________________________________________________\n");
         }
     }
 }
