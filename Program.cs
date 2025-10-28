@@ -4,54 +4,31 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Bil:");
+            Car volkswagen = new Car("VolksWagen", "Passat", 4, "Tyskland", 4500, 1, false,false);
+            volkswagen.startEngine();
 
+            Console.WriteLine("__________________\n");
+            Console.WriteLine("Motorcykel:");
+            Motorcycle triumph = new Motorcycle("Triumph","550",2,"England",2000,0,true,"Knatteligan");
+            triumph.startEngine();
 
-            //Boat eka = new Boat("Eksjö båt", "Optimistjolle", "Sverige",0, 4);
-            //eka.PrintInfo();
-            //Console.WriteLine("-----------------------------------------------");
-            //eka.AddMiles();
-            //eka.PrintInfo();
-            //Console.WriteLine("-----------------------------------------------");
-            //eka.AddMiles();
-            //Console.WriteLine("-----------------------------------------------");
-            //eka.PrintInfo();
+            Console.WriteLine("__________________\n");
+            Console.WriteLine("Båt:");
+            Boat optimistjolle = new Boat("Båtsson", "Optimistjolle", "Sverige", 50, 20,false);
+            optimistjolle.startEngine();
 
-            //Console.WriteLine("-----------------------------------------------");
-            //Motorcycle moppe = new Motorcycle("Puch","340",2,"sweden",0,0,false,null);
-            //moppe.PrintInfo();
-
-            //Boat yacht = new Boat();
-            //yacht.PrintInfo();
-
-            //Car bil = new Car();
-            //bil.PrintInfo();
-            //Console.WriteLine("\n_______________________________\n");
-            //bil.PopTheTrunk();
-            //Console.WriteLine("\n_______________________________\n");
-            //bil.PrintInfo();
-            //bil.PopTheTrunk();
-            //bil.PrintInfo();
-
-            Motorcycle bike = new Motorcycle("Yamasaki","Y20",2,"Japan",100,2,true,"Knatteligan");
-            
-            bike.DoAWheelie();
-            bike.PrintInfo();
-
-            EPA_Truck epa = new EPA_Truck("Volvo","rövbil",4,"Sverige",43000,56,false,false);
-
-            epa.PrintInfo();
-            epa.VehicleInspection();
-
-            bike.VehicleInspection();
-            bike.PrintInfo();
-
-            bike.startEngine();
+            Console.WriteLine("__________________\n");
+            Console.WriteLine("EPA:");
+            EPA_Truck epa = new EPA_Truck("Volvo", "P12", 4, "Sverige", 56000, 38, false, true);
             epa.startEngine();
 
-            //Car volle = new Car("Volvo", "S80", 4, "Sverige", 24000,0);
-            //volle.PrintInfo();
-            //volle.AddMiles();
-            //volle.PrintInfo();
+            Console.WriteLine("__________________\n");
+            Console.WriteLine("Husbil:");
+            Mobilehome husbil = new Mobilehome("Knaus", "Sky Ti 700", 4, "Tyskland", 128, 1, false,false);
+            husbil.startEngine();
+
+            
         }
     }
 }

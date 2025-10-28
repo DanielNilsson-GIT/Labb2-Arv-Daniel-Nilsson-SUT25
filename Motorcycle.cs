@@ -10,6 +10,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
     {
         public bool PartOfGang { get; set; } = false;
         public string Gang { get; set; } = null;
+        public override string VehicleSound { get; set; } = "Rr-rrr-vrroooom-vrroooom!";
 
         public Motorcycle(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners,bool partofgang,string gang)
             : base(brand, model, noofwheels, countryoforigin, swemiles, noofpreviousowners,false)
@@ -18,11 +19,11 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Gang = gang;
         }
 
-        public override void startEngine()
-        {
-            base.startEngine();
-            Console.WriteLine("Rr-rrr-vrroooom-vrroooom!");
-        }
+        //public override void startEngine(string sound)
+        //{
+        //    sound = MotorcycleSound;
+        //    base.startEngine(sound);
+        //}
         public void DoAWheelie()
         {
             Random rnd = new Random();

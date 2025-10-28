@@ -1,33 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Labb2_Arv_Daniel_Nilsson_SUT25
 {
-    internal class EPA_Truck:Car
+    internal class Mobilehome : Car
     {
+        public int NoOfPlatesAvailable { get; set; } = 10;
+        public override string VehicleSound { get; set; } = "rrrrr-t-t-t-t brum";
 
-        public string PlayEPADunk { get; set; } = "Shitty musik spelas";
-
-        public override string VehicleSound { get; set; } = "Host host, splutt! (svart rök kommer)";
-
-        public EPA_Truck(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners, bool hydralics, bool körförbud)
-            : base(brand, model, noofwheels, countryoforigin, swemiles, noofpreviousowners, false, false)
+        public Mobilehome(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners,bool hydralics, bool körförbud)
+            :base(brand,model,noofwheels,countryoforigin,swemiles,noofpreviousowners,hydralics,körförbud)
         {
             
         }
+        public void SetTable()
+        {
+            Console.WriteLine("Hur många ska du duka till?");
+            int noOfGuests = 0;
+            while (!int.TryParse(Console.ReadLine(), out noOfGuests)||noOfGuests <= 0)
+            {
+                Console.WriteLine("Skriv heltal:");
+            }
 
-        public void playEpaDunk()
-        {
-            Console.WriteLine(PlayEPADunk);
-        }
-        public override void VehicleInspection() 
-        {
-            Console.WriteLine("Till allas förvåning gick du igenom besiktningen och kan fortsätta förpesta vägarna. Grattis...");
-            
+            if (noOfGuests > NoOfPlatesAvailable)
+            {
+                Console.WriteLine("Du har inte tillräckligt med talrikar kvar.");
+            }
+            else 
+            {
+                Console.WriteLine("Du har dukat för " + noOfGuests + " gäster.");
+                NoOfPlatesAvailable = NoOfPlatesAvailable - noOfGuests;
+            }
         }
 
         public void PrintInfo()
@@ -50,5 +56,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             }
             Console.WriteLine("\n____________________________________________________________________________________\n");
         }
+        
+
     }
 }
