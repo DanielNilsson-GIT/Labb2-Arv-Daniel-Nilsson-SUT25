@@ -46,9 +46,26 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
                 Console.Write($"Gäng:");
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.ForegroundColor = ConsoleColor.Black;
-                Console.Write($" {Gang}\n");
+                Console.Write($" {Gang}");
                 Console.ResetColor();
+                Console.WriteLine("");
+                Console.Write("\nHar fordonet körförbud? ");
+                if (Körförbud)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write(Körförbud);
+                    Console.ResetColor();
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(Körförbud);
+                    Console.ResetColor();
+                }
+                Console.WriteLine("\n____________________________________________________________________________________\n");
+
                 
+
             }
         }
         public override void Honk()

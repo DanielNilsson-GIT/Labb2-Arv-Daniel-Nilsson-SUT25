@@ -33,13 +33,20 @@
             //bil.PrintInfo();
 
             Motorcycle bike = new Motorcycle("Yamasaki","Y20",2,"Japan",100,2,true,"Knatteligan");
-            bike.DoAWheelie();
-            bike.DoAWheelie();
-            bike.DoAWheelie();
-            bike.DoAWheelie();
+            
             bike.DoAWheelie();
             bike.PrintInfo();
 
+            EPA_Truck epa = new EPA_Truck("Volvo","rövbil",4,"Sverige",43000,56,false,false);
+
+            epa.PrintInfo();
+            epa.VehicleInspection();
+
+            bike.VehicleInspection();
+            bike.PrintInfo();
+
+            bike.startEngine();
+            epa.startEngine();
 
             //Car volle = new Car("Volvo", "S80", 4, "Sverige", 24000,0);
             //volle.PrintInfo();

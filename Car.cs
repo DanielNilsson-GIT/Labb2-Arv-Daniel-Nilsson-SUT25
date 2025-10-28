@@ -8,10 +8,10 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
 {
     internal class Car:Vehicle
     {
-        public bool Hydralics { get; set; } = false;
+        private bool Hydralics { get; set; } = false;
         public bool Trunkopen { get; set; } = false;
 
-        public Car()
+        public Car():base()
         {
 
         }
@@ -19,7 +19,16 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             :base(brand,model,noofwheels,countryoforigin,swemiles,noofpreviousowners,false)
         {
             Hydralics = hydralics;
+            
         }
+
+        //Testing constructors to see how they work
+        //public Car(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners)
+        //   : base(brand, model, noofwheels, countryoforigin, swemiles, noofpreviousowners, false)
+        //{
+        //    //Hydralics = false;
+
+        //}
 
         public override void startEngine()
         {
@@ -48,6 +57,20 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             {
                 Console.WriteLine("\n...Glöm inte att stänga bagageluckan.");
             }
+            Console.Write("\nHar fordonet körförbud? ");
+            if (Körförbud)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(Körförbud);
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(Körförbud);
+                Console.ResetColor();
+            }
+            Console.WriteLine("\n____________________________________________________________________________________\n");
         }
         public override void Honk()
         {

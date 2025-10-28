@@ -108,7 +108,22 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
 
         public virtual void PrintInfo()
         {
-            Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nMil: {SweMiles}\nAntal ägare: {NoOfPreviousOwners}\nHar fordonet körförbud? {Körförbud}");
+            Console.WriteLine("____________________________________________________________________________________");
+            Console.WriteLine("Fordonsinformation:\n");
+            Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nMil: {SweMiles}\nAntal ägare: {NoOfPreviousOwners}");
+            //Console.Write("\nHar fordonet körförbud? ");
+            //if (Körförbud)
+            //{
+            //    Console.ForegroundColor = ConsoleColor.Red;
+            //    Console.Write(Körförbud);
+            //    Console.ResetColor();
+            //}
+            //else
+            //{
+            //    Console.ForegroundColor = ConsoleColor.Green;
+            //    Console.Write(Körförbud);
+            //    Console.ResetColor();
+            //}
         }
         public virtual void Honk()
         {
