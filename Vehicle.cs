@@ -15,6 +15,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         public int SweMiles { get; set; } = 0;
         public int NoOfPreviousOwners { get; set; } = 0;
         public bool Körförbud { get; set; } = false;
+        public virtual string VehicleSound { get; set; } = null;
 
 
         public Vehicle()
@@ -45,7 +46,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Random rnd = new Random();
             int chance = rnd.Next(1, 101);
 
-            if (yearsOld < 10)
+            if (yearsOld <= 10)
             {
                 if (chance > 30)
                 {
@@ -59,7 +60,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
                 }
 
             }
-            else if (yearsOld > 10)
+            else if (yearsOld > 10 && yearsOld <= 29)
             {
                 if (chance > 50)
                 {
@@ -72,7 +73,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
                     Körförbud = true;
                 }
             }
-            else if (yearsOld > 30)
+            else if (yearsOld > 30 && yearsOld <= 94)
             {
                 if (chance > 70)
                 {
@@ -103,6 +104,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         public virtual void startEngine()
         {
             Console.WriteLine("Nyckel vrids...");
+            Console.WriteLine(VehicleSound);
         }
 
 
@@ -111,19 +113,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Console.WriteLine("____________________________________________________________________________________");
             Console.WriteLine("Fordonsinformation:\n");
             Console.WriteLine($"Märke: {Brand}\nModell: {Model}\nAntal hjul: {NoOfWheels}\nLand: {CountryOfOrigin}\nMil: {SweMiles}\nAntal ägare: {NoOfPreviousOwners}");
-            //Console.Write("\nHar fordonet körförbud? ");
-            //if (Körförbud)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Red;
-            //    Console.Write(Körförbud);
-            //    Console.ResetColor();
-            //}
-            //else
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Green;
-            //    Console.Write(Körförbud);
-            //    Console.ResetColor();
-            //}
+       
         }
         public virtual void Honk()
         {

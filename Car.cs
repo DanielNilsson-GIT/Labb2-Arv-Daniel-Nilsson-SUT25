@@ -11,30 +11,19 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         private bool Hydralics { get; set; } = false;
         public bool Trunkopen { get; set; } = false;
 
+        public override string VehicleSound { get; set; } = "Brrr-brrr-brrr-vrooooom!";
+
         public Car():base()
         {
 
         }
-        public Car(string brand, string model, int noofwheels, string countryoforigin, int swemiles,int noofpreviousowners,bool hydralics)
+        public Car(string brand, string model, int noofwheels, string countryoforigin, int swemiles,int noofpreviousowners,bool hydralics, bool körförbud)
             :base(brand,model,noofwheels,countryoforigin,swemiles,noofpreviousowners,false)
         {
             Hydralics = hydralics;
             
         }
 
-        //Testing constructors to see how they work
-        //public Car(string brand, string model, int noofwheels, string countryoforigin, int swemiles, int noofpreviousowners)
-        //   : base(brand, model, noofwheels, countryoforigin, swemiles, noofpreviousowners, false)
-        //{
-        //    //Hydralics = false;
-
-        //}
-
-        public override void startEngine()
-        {
-            base.startEngine();
-            Console.WriteLine("Brrr-brrr-brrr-vrooooom!");
-        }
         public void PopTheTrunk()
         {
             if (Trunkopen == false)
