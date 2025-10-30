@@ -27,7 +27,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
         }
 
      
-        public override void Honk()
+        public override void Honk() 
         {
             Console.WriteLine("DOOOOOT!");
             Console.Beep(20,3);
