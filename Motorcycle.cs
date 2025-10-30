@@ -19,11 +19,7 @@ namespace Labb2_Arv_Daniel_Nilsson_SUT25
             Gang = gang;
         }
 
-        //public override void startEngine(string sound)
-        //{
-        //    sound = MotorcycleSound;
-        //    base.startEngine(sound);
-        //}
+       
         public void DoAWheelie()
         {
             Random rnd = new Random();
